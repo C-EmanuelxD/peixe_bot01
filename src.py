@@ -91,6 +91,6 @@ async def on_message(message):
     if ctx.command is None and message.author.id == id_rafael:
         await message.channel.send(f'Vai se foder {message.author.mention} leproso')
 
-keep_alive()
+keep_alive.keep_alive()
 
 bot.run(token_disc)
