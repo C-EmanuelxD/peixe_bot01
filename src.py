@@ -91,6 +91,20 @@ async def on_message(message):
     if ctx.command is None and message.author.id == id_rafael:
         await message.channel.send(f'Vai se foder {message.author.mention} leproso')
 
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+    
+    await bot.process_commands(message)
+
+    id_bot = 1439064085470642307
+
+    ctx = await bot.get_context(message)
+
+    if ctx.command is None and message.mentions.id == id_bot:
+        await message.channel.send(f'Marca eu não random')
+
 keep_alive.keep_alive()
 
 bot.run(token_disc)
