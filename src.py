@@ -81,6 +81,9 @@ async def horse(ctx):
 async def on_message(message):
     if message.author == bot.user:
         return
+
+    if bot.user in message.mentions and message.mention_everyone is False:
+        await message.channel.send(f'Qual foi? Marca eu não, random fudido')
     
     await bot.process_commands(message)
 
