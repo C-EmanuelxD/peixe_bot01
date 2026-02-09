@@ -64,6 +64,10 @@ async def rafael(ctx):
     await ctx.send(f"É a pior pessoa que esse mundo já viu, o anticristo, forjado nas chamas do scat e viciado em ser corno")
 
 @bot.command()
+async def manu(ctx):
+    await ctx.send(f"Homo não assumido. Ele rebola errado pros cria")
+
+@bot.command()
 async def saidera(ctx):
     await ctx.send(f"Saidera proclamada com sucesso! (quitar antes nao vale)")
 
